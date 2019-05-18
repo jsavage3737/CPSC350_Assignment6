@@ -53,19 +53,41 @@ int main(int argc, char *argv[]){
 
   clock_t start_time; clock_t end_time;
 
+  cout << endl;
   start_time = clock();
-
-  printArray(toSort, n);
+  cout << "Bubble Sort" << endl;
   BubbleSort(toSort1, n);
-  MergeSort(toSort2, 0, n-1);
-  printArray(toSort2, n);
-
   end_time = clock();
-
   cout << "Start : " << start_time << endl;
   cout << "End : " << end_time << endl;
+  cout << "Total time : " << end_time - start_time << endl;
+  cout << endl;
 
+  start_time = clock();
+  cout << "Merge Sort" << endl;
+  MergeSort(toSort2, 0, n-1);
+  end_time = clock();
+  cout << "Start : " << start_time << endl;
+  cout << "End : " << end_time << endl;
+  cout << "Total time : " << end_time - start_time << endl;
+  cout << endl;
 
+  start_time = clock();
+  cout << "Insertion Sort" << endl;
+  InsertionSort(toSort3, n);
+  end_time = clock();
+  cout << "Start : " << start_time << endl;
+  cout << "End : " << end_time << endl;
+  cout << "Total time : " << end_time - start_time << endl;
+  cout << endl;
+
+  start_time = clock();
+  cout << "Quick Sort" << endl;
+  QuickSort(toSort4, 0, n-1);
+  end_time = clock();
+  cout << "Start : " << start_time << endl;
+  cout << "End : " << end_time << endl;
+  cout << "Total time : " << end_time - start_time << endl;
 }
 
 
